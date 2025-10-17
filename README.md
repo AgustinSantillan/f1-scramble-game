@@ -25,8 +25,6 @@ Forma parte del curso **“React: de cero a experto – Edición 2025”** de **
 
 ## Descripción del Proyecto
 
-**Tagline:** ¡Pon a prueba tu conocimiento de la parrilla de Fórmula 1 mientras aplicas `useReducer`!
-
 **Pilotos Desordenados** es un juego donde el usuario debe adivinar el apellido de un piloto de F1 de la parrilla actual, a partir de sus letras desordenadas. El objetivo es maximizar la puntuación antes de alcanzar el límite de 3 errores.
 
 El valor principal de este proyecto reside en la implementación de patrones de gestión de estado complejos y escalables en React, demostrando la separación efectiva de la **Funcionalidad del Proyecto** (la lógica del juego) de la interfaz de usuario:
