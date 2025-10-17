@@ -1,70 +1,122 @@
-# React + TypeScript + Vite
+# Pilotos Desordenados 🏎️ (F1 Scramble Game)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación web de juego de palabras, desarrollada como parte de mi **capacitación autodidacta y profundización en React** y **TypeScript**. El proyecto se enfoca en la gestión de estado avanzada y la modularización de la lógica del negocio.
 
-Currently, two official plugins are available:
+![Estado](https://img.shields.io/badge/Estado-Finalizado-success)
+![Tecnología Principal](https://img.shields.io/badge/Framework-React%20%26%20TS-blue)
+![Estilo](https://img.shields.io/badge/Estilo-Tailwind%20CSS-06B6D4)
+![Licencia](https://img.shields.io/badge/License-Unlicensed-lightgrey)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📝 Tabla de Contenidos
 
-## Expanding the ESLint configuration
+- [Descripción del Proyecto](#descripción-del-proyecto)
+- [Características Principales](#características-principales)
+- [Demostración (Demo)](#demostración-demo)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Instalación Local](#instalación-local)
+- [Uso y Ejecución](#uso-y-ejecución)
+- [Contribución](#contribución)
+- [Licencia](#licencia)
+- [Contacto y Autor](#contacto-y-autor)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Descripción del Proyecto
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+**Tagline:** ¡Pon a prueba tu conocimiento de la parrilla de Fórmula 1 mientras aplicas `useReducer`!
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**Pilotos Desordenados** es un juego donde el usuario debe adivinar el apellido de un piloto de F1 de la parrilla actual, a partir de sus letras desordenadas. El objetivo es maximizar la puntuación antes de alcanzar el límite de 3 errores.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+El valor principal de este proyecto reside en la implementación de patrones de gestión de estado complejos y escalables en React:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* **Lógica de Negocio Centralizada:** Toda la lógica del juego (manejo de puntos, errores, saltos, reseteo) está encapsulada en un **`scrambleWordsReducer`** y un estado global definido por **TypeScript**.
+* **Hook Personalizado (`useScrambleGame`):** Se utilizó este Hook para desacoplar y hacer reusable la lógica del Reducer, exponiendo únicamente las propiedades y métodos necesarios a los componentes principales.
+* **Manejo de Side Effects:** Uso de `useEffect` para disparar efectos visuales (confetti) y para manejar la finalización de la partida.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# f1-scramble-game
+### Características Principales
+
+* **Gestión de Estado Reducer:** Uso del hook `useReducer` para una gestión del estado predecible, similar a Redux, ideal para lógica de juego compleja.
+* **Contadores Rigurosos:** Seguimiento exacto de Puntos, Errores (máx. 3) y Saltos (máx. 3), con un *Game Over* claro al alcanzar el límite.
+* **Diseño Interactivo:** Interfaz construida con componentes modulares estilizados con **Tailwind CSS** y **Shadcn/ui** para un look moderno y limpio.
+* **Reactividad:** Los componentes (`GameStats`, `ScrambledLetters`, `GuessInput`) se actualizan de forma reactiva a los cambios de estado disparados por el `dispatch`.
+* **Efectos de Éxito:** Integración con `canvas-confetti` para una experiencia de usuario gratificante en cada acierto.
+
+## Demostración (Demo)
+
+La aplicación está desplegada en Netlify. Puedes probarla en el siguiente enlace:
+
+🔗 **Aplicación Desplegada:** [https://pilotos-desordenados.netlify.app/](https://pilotos-desordenados.netlify.app/) *(Enlace de ejemplo, se recomienda actualizar)*
+
+*(Espacio para una captura de pantalla o GIF de alta calidad)*
+
+## Tecnologías Utilizadas
+
+* **React:** Biblioteca principal para la construcción de la interfaz de usuario.
+* **TypeScript:** Añade tipado estático al proyecto, mejorando la robustez del código en la lógica del Reducer.
+* **Tailwind CSS:** Framework CSS utility-first para el estilizado rápido y responsivo.
+* **Shadcn/ui:** Componentes de interfaz de usuario de alta calidad.
+* **canvas-confetti:** Librería para efectos visuales.
+* **Vite:** Herramienta de construcción para un entorno de desarrollo rápido.
+
+## Instalación Local
+
+Para clonar y ejecutar este proyecto localmente, sigue estos pasos:
+
+### Prerrequisitos
+
+* Node.js (LTS)
+* npm (o Yarn/pnpm)
+
+### Pasos Detallados
+
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone [URL_DEL_REPOSITORIO]
+    cd pilotos-desordenados
+    ```
+
+2.  **Instalar dependencias:**
+    ```bash
+    npm install
+    ```
+
+3.  **Configuración de Entorno:**
+    Este proyecto no requiere variables de entorno ni secretos para su funcionamiento base.
+
+## Uso y Ejecución
+
+Para iniciar la aplicación en modo de desarrollo:
+
+1.  **Iniciar el servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
+    La aplicación se abrirá en tu navegador, generalmente en `http://localhost:5173/`.
+
+2.  **Ejemplos de Uso:**
+    * **Adivinar:** Escribe el apellido del piloto en el campo de texto y presiona el botón "Enviar respuesta" o la tecla Enter.
+    * **Saltar:** Haz clic en el botón "SALTAR" si no conoces el apellido (máx. 3 veces por partida).
+    * **Reiniciar:** Al terminar, el botón "JUGAR DE NUEVO" recarga el estado inicial del `useReducer` para una nueva partida.
+
+## Contribución
+
+Se valoran las contribuciones, especialmente aquellas que mejoren la eficiencia o la lógica del juego.
+
+1.  Haz un *fork* del repositorio.
+2.  Crea una nueva rama (`git checkout -b feature/mejora-logica`).
+3.  Realiza tus cambios y haz *commit* (`git commit -am 'refactor: Mejora la logica del Reducer'`).
+4.  Empuja la rama a tu *fork* (`git push origin feature/mejora-logica`).
+5.  Abre un **Pull Request (PR)** detallando los cambios y las mejoras aplicadas.
+
+## Licencia
+
+Este proyecto está bajo la licencia **Unlicensed** (Sin Licencia Específica).
+
+## Contacto y Autor
+
+Este proyecto fue desarrollado en mi proceso de formación.
+
+* **Autor/Desarrollador:** [Tu Nombre Completo]
+* **GitHub:** [Tu Perfil de GitHub]
+* **LinkedIn:** [Tu Perfil de LinkedIn]
+* **Email:** [Tu Correo Electrónico]
