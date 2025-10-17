@@ -7,7 +7,6 @@ Forma parte del curso **“React: de cero a experto – Edición 2025”** de **
 ![Estado](https://img.shields.io/badge/Estado-Finalizado-success)
 ![Tecnología Principal](https://img.shields.io/badge/Framework-React%20%26%20TS-blue)
 ![Estilo](https://img.shields.io/badge/Estilo-Tailwind%20CSS-06B6D4)
-![Licencia](https://img.shields.io/badge/License-Unlicensed-lightgrey)
 
 ## 📝 Tabla de Contenidos
 
