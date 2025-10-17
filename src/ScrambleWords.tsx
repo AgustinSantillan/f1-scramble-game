@@ -48,7 +48,7 @@ export const ScrambleWords = () => {
 
                 <CustomHeader
                     title='Pilotos desordenados'
-                    description='Ordená las letras y descifrá el apellido del piloto de F1 2025!'
+                    description='Ordená las letras y descifrá el Apellido del piloto de F1 2025!'
                 />
 
                 <Card className="backdrop-blur-md bg-gray-900/70 border border-gray-800 shadow-lg">

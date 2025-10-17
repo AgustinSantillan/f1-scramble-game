@@ -32,7 +32,7 @@ export const GuessInput = ({ dispatch, guess, handleGuessSubmit, isGameOver, scr
                                 payload: e.target.value,
                             });
                         }}
-                        placeholder="Escribí el apellido..."
+                        placeholder="Escribí el Apellido..."
                         className="text-center text-lg font-semibold h-12 w-full px-4 rounded-lg bg-gray-200 text-gray-800 border-2 border-gray-700  focus:border-[#E10600] placeholder:text-gray-400 transition-colors"
                         maxLength={scrambledWord.length}
                         disabled={isGameOver}
