@@ -98,20 +98,6 @@ Para iniciar la aplicación en modo de desarrollo:
     * **Saltar:** Haz clic en el botón "SALTAR" si no conoces el apellido (máx. 3 veces por partida).
     * **Reiniciar:** Al terminar, el botón "JUGAR DE NUEVO" recarga el estado inicial del `useReducer` para una nueva partida.
 
-## Contribución
-
-Se valoran las contribuciones, especialmente aquellas que mejoren la eficiencia o la lógica del juego.
-
-1.  Haz un *fork* del repositorio.
-2.  Crea una nueva rama (`git checkout -b feature/mejora-logica`).
-3.  Realiza tus cambios y haz *commit* (`git commit -am 'refactor: Mejora la logica del Reducer'`).
-4.  Empuja la rama a tu *fork* (`git push origin feature/mejora-logica`).
-5.  Abre un **Pull Request (PR)** detallando los cambios y las mejoras aplicadas.
-
-## Licencia
-
-Este proyecto está bajo la licencia **Unlicensed** (Sin Licencia Específica).
-
 ## Contacto y Autor
 
 Este proyecto fue desarrollado en mi proceso de formación.
