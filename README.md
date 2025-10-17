@@ -69,7 +69,7 @@ Para clonar y ejecutar este proyecto localmente, sigue estos pasos:
 1.  **Clonar el repositorio:**
     ```bash
     git clone https://github.com/AgustinSantillan/f1-scramble-game.git
-    cd pilotos-desordenados
+    cd f1-scramble-game
     ```
 
 2.  **Instalar dependencias:**
