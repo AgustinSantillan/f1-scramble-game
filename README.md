@@ -30,7 +30,7 @@ Forma parte del curso **“React: de cero a experto – Edición 2025”** de **
 El valor principal de este proyecto reside en la implementación de patrones de gestión de estado complejos y escalables en React, demostrando la separación efectiva de la **Funcionalidad del Proyecto** (la lógica del juego) de la interfaz de usuario:
 
 * **Lógica de Juego Centralizada:** Toda la **lógica del juego** (manejo de puntos, errores, saltos, reseteo) está encapsulada en un **`scrambleWordsReducer`** y un estado global definido por **TypeScript**.
-* **Hook Personalizado (`useScrambleGame`):** Se utilizó este Hook para desacoplar y hacer reusable la **Lógica de la Aplicación** (*core logic*), exponiendo únicamente las propiedades y métodos necesarios a los componentes principales.
+* **Hook Personalizado (`useScrambleGame`):** Se utilizó este Hook para desacoplar y hacer reusable la **Lógica de la Aplicación**, exponiendo únicamente las propiedades y métodos necesarios a los componentes principales.
 * **Manejo de Side Effects:** Uso de `useEffect` para disparar efectos visuales (confetti) y para manejar la finalización de la partida.
 
 ### Características Principales
