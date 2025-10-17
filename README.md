@@ -44,7 +44,7 @@ El valor principal de este proyecto reside en la implementación de patrones de 
 
 La aplicación está desplegada en Netlify. Puedes probarla en el siguiente enlace:
 
-🔗 **Aplicación Desplegada:** [https://pilotos-desordenados.netlify.app/](https://pilotos-desordenados.netlify.app/) *(Enlace de ejemplo, se recomienda actualizar)*
+🔗 **Aplicación Desplegada:** [https://fascinating-starship-2b3d57.netlify.app/) *(Enlace de ejemplo, se recomienda actualizar)*
 
 ## Tecnologías Utilizadas
 
