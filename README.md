@@ -1,6 +1,8 @@
 # Pilotos Desordenados 🏎️ (F1 Scramble Game)
 
-Este proyecto es una aplicación web de juego de palabras, desarrollada como parte de mi **capacitación autodidacta y profundización en React** y **TypeScript**. El proyecto se enfoca en la gestión de estado avanzada y la modularización de la lógica del negocio.
+Este proyecto es una aplicación web de juego de palabras, desarrollada como parte de mi **capacitación autodidacta y profundización en React** y **TypeScript**. El proyecto se enfoca en la gestión de estado avanzada y la modularización de la **Lógica de la Aplicación**.
+
+Forma parte del curso **“React: de cero a experto – Edición 2025”** de **Fernando Herrera (DevTalles)**.
 
 ![Estado](https://img.shields.io/badge/Estado-Finalizado-success)
 ![Tecnología Principal](https://img.shields.io/badge/Framework-React%20%26%20TS-blue)
@@ -27,15 +29,15 @@ Este proyecto es una aplicación web de juego de palabras, desarrollada como par
 
 **Pilotos Desordenados** es un juego donde el usuario debe adivinar el apellido de un piloto de F1 de la parrilla actual, a partir de sus letras desordenadas. El objetivo es maximizar la puntuación antes de alcanzar el límite de 3 errores.
 
-El valor principal de este proyecto reside en la implementación de patrones de gestión de estado complejos y escalables en React:
+El valor principal de este proyecto reside en la implementación de patrones de gestión de estado complejos y escalables en React, demostrando la separación efectiva de la **Funcionalidad del Proyecto** (la lógica del juego) de la interfaz de usuario:
 
-* **Lógica de Negocio Centralizada:** Toda la lógica del juego (manejo de puntos, errores, saltos, reseteo) está encapsulada en un **`scrambleWordsReducer`** y un estado global definido por **TypeScript**.
-* **Hook Personalizado (`useScrambleGame`):** Se utilizó este Hook para desacoplar y hacer reusable la lógica del Reducer, exponiendo únicamente las propiedades y métodos necesarios a los componentes principales.
+* **Lógica de Juego Centralizada:** Toda la **lógica del juego** (manejo de puntos, errores, saltos, reseteo) está encapsulada en un **`scrambleWordsReducer`** y un estado global definido por **TypeScript**.
+* **Hook Personalizado (`useScrambleGame`):** Se utilizó este Hook para desacoplar y hacer reusable la **Lógica de la Aplicación** (*core logic*), exponiendo únicamente las propiedades y métodos necesarios a los componentes principales.
 * **Manejo de Side Effects:** Uso de `useEffect` para disparar efectos visuales (confetti) y para manejar la finalización de la partida.
 
 ### Características Principales
 
-* **Gestión de Estado Reducer:** Uso del hook `useReducer` para una gestión del estado predecible, similar a Redux, ideal para lógica de juego compleja.
+* **Gestión de Estado Reducer:** Uso del hook `useReducer` para una gestión del estado predecible, similar a Redux, ideal para **Lógica del Juego** compleja.
 * **Contadores Rigurosos:** Seguimiento exacto de Puntos, Errores (máx. 3) y Saltos (máx. 3), con un *Game Over* claro al alcanzar el límite.
 * **Diseño Interactivo:** Interfaz construida con componentes modulares estilizados con **Tailwind CSS** y **Shadcn/ui** para un look moderno y limpio.
 * **Reactividad:** Los componentes (`GameStats`, `ScrambledLetters`, `GuessInput`) se actualizan de forma reactiva a los cambios de estado disparados por el `dispatch`.
@@ -47,12 +49,10 @@ La aplicación está desplegada en Netlify. Puedes probarla en el siguiente enla
 
 🔗 **Aplicación Desplegada:** [https://pilotos-desordenados.netlify.app/](https://pilotos-desordenados.netlify.app/) *(Enlace de ejemplo, se recomienda actualizar)*
 
-*(Espacio para una captura de pantalla o GIF de alta calidad)*
-
 ## Tecnologías Utilizadas
 
 * **React:** Biblioteca principal para la construcción de la interfaz de usuario.
-* **TypeScript:** Añade tipado estático al proyecto, mejorando la robustez del código en la lógica del Reducer.
+* **TypeScript:** Añade tipado estático al proyecto, mejorando la robustez del código en la **Lógica del Reducer**.
 * **Tailwind CSS:** Framework CSS utility-first para el estilizado rápido y responsivo.
 * **Shadcn/ui:** Componentes de interfaz de usuario de alta calidad.
 * **canvas-confetti:** Librería para efectos visuales.
@@ -97,12 +97,3 @@ Para iniciar la aplicación en modo de desarrollo:
     * **Adivinar:** Escribe el apellido del piloto en el campo de texto y presiona el botón "Enviar respuesta" o la tecla Enter.
     * **Saltar:** Haz clic en el botón "SALTAR" si no conoces el apellido (máx. 3 veces por partida).
     * **Reiniciar:** Al terminar, el botón "JUGAR DE NUEVO" recarga el estado inicial del `useReducer` para una nueva partida.
-
-## Contacto y Autor
-
-Este proyecto fue desarrollado en mi proceso de formación.
-
-* **Autor/Desarrollador:** [Tu Nombre Completo]
-* **GitHub:** [Tu Perfil de GitHub]
-* **LinkedIn:** [Tu Perfil de LinkedIn]
-* **Email:** [Tu Correo Electrónico]
